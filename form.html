@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+body {
+            background-image: url('Desktop Temples View (1).png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* Hide images by default */
+        .image-container {
+            display: none;
+        }
+        /* Style for image buttons */
+        .image-button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 10px; /* Adjust margin as needed */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Button with image for toggling Image 1 visibility -->
+    <button class="image-button" onclick="toggleImage('image1')">
+        <img src="pngtree-yellow-crown-king-crown-png-image_5323922.jpeg" alt="Toggle Image 1">
+    </button>
+
+    <!-- Image containers -->
+    <div class="image-container" id="image1">
+        <img src="WEB BROWSER.png" alt="Image 1">
+    </div>
+
+    <script>
+        // JavaScript function to toggle image visibility
+        function toggleImage(imageId) {
+            var image = document.getElementById(imageId);
+            if (image.style.display === "none") {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

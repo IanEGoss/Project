@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('Password Screen.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        input[type="button"] {
+            font-size: 25px;
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        form {
+            position: absolute; /* Position the element absolutely */
+            top: 68%; /* Align the top of the element to the middle */
+            left: 65%; /* Align the left side of the element to the middle */
+            transform: translate(-50%, -50%); /* Center the element horizontally and vertically */
+            text-align: center; /* Align form elements to the center */
+        }
+
+        form label {
+            display: block; /* Display the label as a block element */
+            margin-bottom: 10px; /* Add some space below the label */
+        }
+
+        form input[type="password"] {
+            width: 100%; /* Make the input field take up the full width */
+            box-sizing: border-box; /* Include padding and border in the width */
+            margin-bottom: 10px; /* Add some space below the input field */
+        }
+
+        form input[type="button"] {
+            width: auto; /* Allow the button to determine its own width */
+            display: inline-block; /* Display the button inline */
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label for="pswd">Enter your password:</label>
+    <input type="password" id="pswd"><br> <!-- Add line break to move button to next line -->
+    <input type="button" value="Submit" onclick="checkPassword();">
+</form>
+<script>
+    function checkPassword() {
+        var password = document.getElementById("pswd").value;
+        if (password === "Bronze Crown" || password === "bronze crown"|| password === "bronzecrown"|| password === "Bronzecrown") {
+            window.location.href = "form.html"; // Change to the URL of your next page
+        } else {
+            alert("Incorrect password. Please try again.");
+        }
+    }
+</script>
+</body>
+</html>
