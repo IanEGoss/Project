@@ -9,7 +9,8 @@ h1 {
   transform: translate(-50%, -50%); /* Center the element horizontally and vertically */
 }
 p {
-  color: red;
+  color: white;
+  font-size: 40px;
 }
 
 label {
